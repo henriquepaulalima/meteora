@@ -7,8 +7,10 @@ import closeIcon from '@/assets/imgs/close-icon.png';
 import { useState } from 'react';
 import classNames from 'classnames';
 import Link from 'next/link';
+import {usePathname} from 'next/navigation';
 
 export default function Header() {
+  const pathname = usePathname();  
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleMenuClick = () => {
@@ -45,19 +47,19 @@ export default function Header() {
           </div>
           <ul>
             <li
-              className={classNames({ [styles.active]: window.location.pathname === '/home' })}
+              className={classNames({ [styles.active]: pathname === '/home' })}
               onClick={handleMenuClick}
             ><Link href='/home'>Home</Link></li>
             <li
-              className={classNames({ [styles.active]: window.location.pathname === '/stores' })}
+              className={classNames({ [styles.active]: pathname === '/stores' })}
               onClick={handleMenuClick}
             ><Link href='/stores'>Nossas lojas</Link></li>
             <li
-              className={classNames({ [styles.active]: window.location.pathname === '/news' })}
+              className={classNames({ [styles.active]: pathname === '/news' })}
               onClick={handleMenuClick}
             ><Link href='/news'>Novidades</Link></li>
             <li
-              className={classNames({ [styles.active]: window.location.pathname === '/sales' })}
+              className={classNames({ [styles.active]: pathname === '/sales' })}
               onClick={handleMenuClick}
             ><Link href='/sales'>Promoções</Link></li>
           </ul>
