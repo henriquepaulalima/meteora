@@ -7,10 +7,10 @@ import closeIcon from '@/assets/imgs/close-icon.png';
 import { useState } from 'react';
 import classNames from 'classnames';
 import Link from 'next/link';
-import {usePathname} from 'next/navigation';
+import { usePathname } from 'next/navigation';
 
 export default function Header() {
-  const pathname = usePathname();  
+  const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleMenuClick = () => {
@@ -23,29 +23,12 @@ export default function Header() {
 
   return (
     <header className={styles.header__container}>
-      <div className={styles.header_left_side__container}>
-        <img src={HeaderLogo.src} alt="Logo da Meteora" />
-      </div>
-      <div className={styles.header_right_side__container}>
-        <img
-          onClick={handleMenuClick}
-          className={styles.open_menu__icon}
-          src={menuIcon.src}
-          alt="Ícone de abrir menu"
-        />
-        <div className={classNames({
-          [styles.menu__container]: true,
-          [styles.open]: isMenuOpen,
-        })}>
-          <div className={styles.menu_title__container}>
-            <img
-              onClick={handleMenuClick}
-              className={styles.close_menu__icon}
-              src={closeIcon.src}
-              alt="Ícone de fechar menu"
-            />
-          </div>
-          <ul>
+      <nav className={styles.header_nav__container}>
+        <div className={styles.header_left_side__container}>
+          <img src={HeaderLogo.src} alt="Logo da Meteora" />
+        </div>
+        <div className={styles.header_right_side__container}>
+          <ul className={styles.header__links}>
             <li
               className={classNames({ [styles.active]: pathname === '/home' })}
               onClick={handleMenuClick}
@@ -63,7 +46,52 @@ export default function Header() {
               onClick={handleMenuClick}
             ><Link href='/sales'>Promoções</Link></li>
           </ul>
+          <div className={styles.header_search__container}>
+            <input className={styles.header_search__input} type='text' placeholder='Digite o produto' />
+            <button className={styles.header_search__button}>Procurar</button>
+          </div>
+          <img
+            onClick={handleMenuClick}
+            className={styles.open_menu__icon}
+            src={menuIcon.src}
+            alt="Ícone de abrir menu"
+          />
+          <div className={classNames({
+            [styles.menu__container]: true,
+            [styles.open]: isMenuOpen,
+          })}>
+            <div className={styles.menu_title__container}>
+              <img
+                onClick={handleMenuClick}
+                className={styles.close_menu__icon}
+                src={closeIcon.src}
+                alt="Ícone de fechar menu"
+              />
+            </div>
+            <ul>
+              <li
+                className={classNames({ [styles.active]: pathname === '/home' })}
+                onClick={handleMenuClick}
+              ><Link href='/home'>Home</Link></li>
+              <li
+                className={classNames({ [styles.active]: pathname === '/stores' })}
+                onClick={handleMenuClick}
+              ><Link href='/stores'>Nossas lojas</Link></li>
+              <li
+                className={classNames({ [styles.active]: pathname === '/news' })}
+                onClick={handleMenuClick}
+              ><Link href='/news'>Novidades</Link></li>
+              <li
+                className={classNames({ [styles.active]: pathname === '/sales' })}
+                onClick={handleMenuClick}
+              ><Link href='/sales'>Promoções</Link></li>
+            </ul>
+          </div>
         </div>
+      </nav>
+      <div className={styles.header_search_mobile__container}>
+        <input className={styles.header_search_mobile__input} type='text' placeholder='Digite o produto' />
+        <button className={styles.header_search_mobile__button}>Procurar</button>
       </div>
     </header>
   );
