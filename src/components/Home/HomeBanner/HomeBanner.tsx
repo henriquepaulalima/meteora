@@ -1,13 +1,5 @@
 import styles from './HomeBanner.module.scss';
-import mobileBannerImg1 from '@/assets/imgs/Mobile/Banner carousel 1 _ 375.png';
-import mobileBannerImg2 from '@/assets/imgs/Mobile/Banner carousel 2 _ 375.png';
-import mobileBannerImg3 from '@/assets/imgs/Mobile/Banner carousel 3 _ 375.png';
-import tabletBannerImg1 from '@/assets/imgs/Tablet/Banner carousel 1 _ 768.png';
-import tabletBannerImg2 from '@/assets/imgs/Tablet/Banner carousel 2 _ 768.png';
-import tabletBannerImg3 from '@/assets/imgs/Tablet/Banner carousel 3 _ 768.png';
-import desktopBannerImg1 from '@/assets/imgs/Desktop/Banner carousel 1 _ 1440 (1).png';
-import desktopBannerImg2 from '@/assets/imgs/Desktop/Banner carousel 2 _ 1440 (1).png';
-import desktopBannerImg3 from '@/assets/imgs/Desktop/Banner carousel 3 _ 1440 (1).png';
+import { homeBannerMobileImgs, homeBannerTabletImgs, homeBannerDesktopImgs } from '@/utils/imageImports';
 import { useEffect, useState } from 'react';
 import { StaticImageData } from 'next/image';
 import classNames from 'classnames';
@@ -21,21 +13,15 @@ export default function HomeBanner() {
 
     if (screenSize < 768) {
       setCurrentImages([
-        mobileBannerImg1,
-        mobileBannerImg2,
-        mobileBannerImg3,
+        ...homeBannerMobileImgs
       ]);
     } else if (screenSize >= 768 && screenSize < 1024) {
       setCurrentImages([
-        tabletBannerImg1,
-        tabletBannerImg2,
-        tabletBannerImg3,
+        ...homeBannerTabletImgs
       ]);
     } else if (screenSize >= 1024) {
       setCurrentImages([
-        desktopBannerImg1,
-        desktopBannerImg2,
-        desktopBannerImg3,
+        ...homeBannerDesktopImgs
       ]);
     }
   }, []);
