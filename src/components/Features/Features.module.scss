@@ -1,0 +1,60 @@
+@import '@/assets/styles/_variables.scss';
+
+.features__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: $black;
+  padding: 1.5rem;
+
+  .features__title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: $white;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  .features__items_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (min-width: 1024px) {
+      flex-direction: row;
+    }
+
+    .features__item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+
+      @media (min-width: 768px) {
+        justify-content: flex-start;
+      }
+
+      .features__item_img {
+        height: 3rem;
+        object-fit: cover;
+        padding: 1rem;
+      }
+
+      .features__item_info_container {
+        h3 {
+          color: $green;
+          font-size: 1rem;
+          font-weight: 700;
+          padding: .5rem 0;
+        }
+
+        p {
+          color: $white;
+          font-size: .75rem;
+          font-weight: 400;
+          padding: .5rem 0;
+        }
+      }
+    }
+  }
+}
