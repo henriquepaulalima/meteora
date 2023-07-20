@@ -25,24 +25,30 @@ import desktopPantsImg from '@/assets/imgs/Desktop/Categorias/Categoria calça.p
 import desktopTShirtsImg from '@/assets/imgs/Desktop/Categorias/Categoria camiseta.png';
 import desktopCoatesImg from '@/assets/imgs/Desktop/Categorias/Categoria casacos.png';
 import desktopGlassesImg from '@/assets/imgs/Desktop/Categorias/Categoria óculos.png';
+import purseProductImg from '@/assets/imgs/Imagens Cards/Bolsa.png';
+import pantsProductImg from '@/assets/imgs/Imagens Cards/Calça.png';
+import shirtProductImg from '@/assets/imgs/Imagens Cards/Camiseta.png';
+import coatesProductImg from '@/assets/imgs/Imagens Cards/Jaqueta.png';
+import glassesProductImg from '@/assets/imgs/Imagens Cards/óculos.png';
+import shoesProductImg from '@/assets/imgs/Imagens Cards/Tenis.png';
 
 export const homeBannerMobileImgs = [
   mobileBannerImg1,
   mobileBannerImg2,
   mobileBannerImg3,
-]
+];
 
 export const homeBannerTabletImgs = [
   tabletBannerImg1,
   tabletBannerImg2,
   tabletBannerImg3,
-]
+];
 
 export const homeBannerDesktopImgs = [
   desktopBannerImg1,
   desktopBannerImg2,
   desktopBannerImg3,
-]
+];
 
 export const homeCategoriesMobileImgs = [
   mobilePurseImg,
@@ -51,7 +57,7 @@ export const homeCategoriesMobileImgs = [
   mobileTShirtsImg,
   mobileCoatesImg,
   mobileGlassesImg,
-]
+];
 
 export const homeCategoriesTabletImgs = [
   tabletPurseImg,
@@ -60,7 +66,7 @@ export const homeCategoriesTabletImgs = [
   tabletTShirtsImg,
   tabletCoatesImg,
   tabletGlassesImg,
-]
+];
 
 export const homeCategoriesDesktopImgs = [
   desktopPurseImg,
@@ -69,4 +75,13 @@ export const homeCategoriesDesktopImgs = [
   desktopTShirtsImg,
   desktopCoatesImg,
   desktopGlassesImg,
-]
+];
+
+export const productsImgs = [
+  purseProductImg,
+  pantsProductImg,
+  shirtProductImg,
+  coatesProductImg,
+  glassesProductImg,
+  shoesProductImg,
+];

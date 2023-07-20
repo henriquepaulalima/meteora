@@ -1,0 +1,17 @@
+@import '@/assets/styles/_variables.scss';
+
+.home_products__container {
+  display: flex;
+  padding: 1rem;
+
+  .home_products__title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: $black;
+    text-align: center;
+  }
+  
+  .home_products__list {
+    display: flex;
+  }
+}
