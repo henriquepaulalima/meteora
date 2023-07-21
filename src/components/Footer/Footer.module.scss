@@ -1,0 +1,16 @@
+@import '@/assets/styles/_variables.scss';
+
+.footer__container {
+  display: flex;
+  justify-content: center;
+  background: $black;
+
+  .footer__text {
+    font-size: .75rem;
+    font-weight: 400;
+    text-align: center;
+    line-height: 20px;
+    color: $white;
+    padding: 2rem 3rem;
+  }
+}
