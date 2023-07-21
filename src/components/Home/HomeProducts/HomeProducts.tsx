@@ -16,7 +16,7 @@ export default function HomeProducts() {
             img: product.src,
             title: 'Bolsa coring',
             detail: 'Bolsa camel em couro sintético de alta duração. Ideal para acompanhar você por uma vida!',
-            price: 120.00
+            price: 120.50
           }
         ]);
       } else if (index == 1) {

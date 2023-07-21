@@ -2,6 +2,7 @@
 
 .home_products__container {
   display: flex;
+  flex-direction: column;
   padding: 1rem;
 
   .home_products__title {
@@ -10,8 +11,15 @@
     color: $black;
     text-align: center;
   }
-  
+
   .home_products__list {
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
   }
 }
