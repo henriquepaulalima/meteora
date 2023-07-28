@@ -1,0 +1,106 @@
+@import '@/assets/styles/_variables.scss';
+
+.product_details__container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: -webkit-fill-available;
+  width: -webkit-fill-available;
+  margin: 1rem;
+  background: $white;
+  z-index: 2;
+
+  .product_details__header {
+    background: $black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: .5rem;
+    height: auto;
+
+    .product_details__header_icon {
+      height: 1.75rem;
+      object-fit: cover;
+    }
+
+    p {
+      color: $white;
+      text-align: center;
+      font-size: 1.25rem;
+      font-weight: 500;
+    }
+
+    button {
+      background: none;
+      border: none;
+
+      img {
+        height: 1.25rem;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .product_details__content {
+    display: flex;
+    flex-direction: column;
+    background: $white;
+    margin: .5rem;
+    border: 1px solid $light-grey;
+
+    .product_details__img {
+      object-fit: cover;
+    }
+
+    .product_details__info {
+      padding: 1rem .5rem;
+
+      .product_details__info_details {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 0;
+
+        h2 {
+          color: $black;
+          font-size: 1rem;
+          font-weight: 700;
+          padding-bottom: 1rem;
+        }
+
+        .product_details__info_details_detail {
+          color: $dark-grey;
+          font-size: .75rem;
+          font-style: normal;
+          font-weight: 400;
+          padding-bottom: 1rem;
+          border-bottom: 1px solid $black;
+        }
+
+        .product_details__info_details_price {
+          color: $dark-grey;
+          font-size: 1.25rem;
+          font-weight: 500;
+          padding: 1rem 0;
+        }
+
+        .product_details__info_details_seller {
+          color: $light-grey;
+          font-size: .75rem;
+          font-weight: 400;
+        }
+      }
+
+      .product_details__colors {
+        .product_details__colors_blue {}
+
+        .product_details__colors_white {}
+
+        .product_details__colors_black {}
+      }
+
+      .product_details__sizes {}
+    }
+  }
+
+  .product_details__add_to_bag_btn {}
+}
