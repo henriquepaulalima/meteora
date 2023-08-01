@@ -1,11 +1,12 @@
 'use client'
 
 import HomePage from "@/components/Home/HomePage";
+import { RecoilRoot } from "recoil";
 
 export default function Home() {
   return (
-    <section>
+    <RecoilRoot>
       <HomePage />
-    </section>
+    </RecoilRoot>
   )
 }
